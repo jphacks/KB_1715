@@ -1,0 +1,13 @@
+current directory: /vagrant/shotaimen/mypet/KB_1715/vender/bundle/ruby/2.4.0/gems/json-2.1.0/ext/json
+/home/vagrant/.rbenv/versions/2.4.1/bin/ruby -r ./siteconf20171021-3718-dk5nw5.rb extconf.rb
+creating Makefile
+
+current directory: /vagrant/shotaimen/mypet/KB_1715/vender/bundle/ruby/2.4.0/gems/json-2.1.0/ext/json
+make "DESTDIR=" clean
+
+current directory: /vagrant/shotaimen/mypet/KB_1715/vender/bundle/ruby/2.4.0/gems/json-2.1.0/ext/json
+make "DESTDIR="
+make: Nothing to be done for `all'.
+
+current directory: /vagrant/shotaimen/mypet/KB_1715/vender/bundle/ruby/2.4.0/gems/json-2.1.0/ext/json
+make "DESTDIR=" install

@@ -277,3 +277,12 @@ Migrating to CreatePhotos (20171021045822)
             FROM sqlite_temp_master
             WHERE name='index_users_on_email' AND type='index'
 [0m
+Started GET "/" for 10.0.2.2 at 2017-10-21 08:59:17 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (1.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (8.7ms)
+Completed 200 OK in 1288ms (Views: 1249.0ms | ActiveRecord: 0.0ms)
+
+
