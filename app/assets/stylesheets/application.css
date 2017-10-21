@@ -13,3 +13,153 @@
  *= require_tree .
  *= require_self
  */
+/* 共通レイアウト ================================ */
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+body {
+    padding-top: 60px;
+    color: #364a4d;
+    margin:0;
+}
+
+h2 {
+    margin-top:25px;
+}
+
+ul, li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: #1f89e2;
+}
+
+a:hover{
+    text-decoration: underline;
+    color: #1b7ccd;
+}
+
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.content{
+    width: 90%;
+}
+
+.main-content{
+    width: 90%;
+    margin:0 auto;
+}
+
+.res-field{
+    margin:10px 0;
+    background-color: #f0f0f0;
+    border-radius: 3px;
+    padding:10px;
+}
+
+field{
+    margin:10px 0;
+}
+
+/* ヘッダー ================================ */
+header {
+    height: 55px;
+    width: 100%;
+    background-color: rgba(234, 49, 52, 0.9);
+    top: 0;
+    position: fixed;
+}
+
+#logo {
+    float: left;
+    font-size: 27px;
+    color: #fff;
+    padding-top: 20px;
+    letter-spacing: -1px;
+    font-weight: bold;
+    margin: 0 auto;
+}
+#logo a {
+    text-decoration: none;
+    color: #f7f7f7;
+}
+
+#logo a {
+    text-decoration: none;
+    color: #f7f7f7;
+}
+
+.header-right {
+    float: right;
+    margin: 0 auto;
+}
+
+.header-right a {
+    color: white;
+    display: block;
+    text-decoration: none;
+}
+
+.header-right li {
+    line-height: 55px;
+    padding: 0 18px;
+    float: left;
+    color: white;
+}
+
+.menu-icon {
+    display:none;
+}
+
+/* フッター ================================ */
+footer {
+    margin-top: 100px;
+    padding-top: 5px;
+    border-top: 1px solid #eaeaea;
+    color: #848484;
+}
+
+footer .small {
+    float: left;
+    font-size: 14px;
+}
+
+/* devise ================================ */
+.devise-list{
+    position: fixed;
+    height:15px;
+    padding-left:0px;
+    margin-top: 2px;
+}
+.devise-list > li {
+    line-height: 15px;
+    float: left;
+    padding-right: 8px;
+    font-size: 12px;
+}
+
+
+/* フラッシュ ================================ */
+.flash {
+    padding: 4px 3px;
+    color:black;
+    font-weight: bold;
+    background-color: rgba(255, 204, 204, 0.8);
+    text-align: center;
+    position: fixed;
+    top: 55px;
+    z-index: 10;
+    width: 100%;
+    border-radius: 2px;
+    font-size: 14px;
+}
