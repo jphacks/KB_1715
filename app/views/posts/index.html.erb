@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<h1>投稿写真</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>写真</th>
+      <th colspan="1"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @posts.each do |post| %>
+      <tr>
+        <td><%= post.image_name %></td>
+        <td><%= link_to '削除', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to '新規投稿', new_post_path %>
