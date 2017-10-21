@@ -1,4 +1,6 @@
+vender/bundle
 vendor/bundle
-tmp
-log
 .bundle
+tmp/*
+log/*
+
