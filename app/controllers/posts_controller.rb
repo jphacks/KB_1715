@@ -1,5 +1,6 @@
 # require 'Kconv'
 class PostsController < ApplicationController
+  include BluemixHelper
   before_action :set_post, only: [:show, :edit, :update, :destroy]
 
   # GET /posts
@@ -36,8 +37,9 @@ class PostsController < ApplicationController
         format.html { redirect_to @post, notice: '写真を投稿しました。' }
         format.json { render :show, status: :created, location: @post }
       else
-        deleteimg(image_name)
+        #deleteimg(image_name)
         format.html { render :new }
+        flash.now[:alert] = result
         format.json { render json: @post.errors, status: :unprocessable_entity }
       end
     end
@@ -85,8 +87,16 @@ class PostsController < ApplicationController
       elsif img_object.size > 4.megabyte
         result = 'ファイルサイズは4MBまでです。'
       else
-        File.open("public/#{image_name.force_encoding("utf-8")}", 'wb') { |f| f.write(img_object.read) }
-        result = "success"
+        f = File.open("public/#{image_name.force_encoding("utf-8")}", 'wb')
+        f.write(img_object.read)
+        f.close()
+        scores = request_to_bluemix(File.open("public/#{image_name.force_encoding("utf-8")}", 'rb'))
+        if scores.key?("cat") && scores["cat"] > 0.9
+          result = "success"
+        else
+          File.unlink "public/"+image_name.force_encoding("utf-8")
+          result = "ねこではないと判断されました"
+        end
       end
       return result
     end
