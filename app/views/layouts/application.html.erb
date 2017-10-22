@@ -9,12 +9,31 @@
   </head>
 
   <body>
+
+  <!-----------header------------>
+  <header>
+    <div class="container">
+      <div id="logo"><%= link_to 'My Pets', root_path %></div>
+
+      <ul class="header-right">
+        <% if user_signed_in? %>
+            <li><%= link_to 'プロフィール',"/users/#{current_user.id}" %></li>
+            <li><%= link_to '写真投稿', "/posts" %></li>
+            <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li>
+        <% else %>
+            <li><%= link_to 'ログイン/新規登録',new_user_session_path %></li>
+        <% end %>
+      </ul>
+    </div>
+  </header>
     <% if notice %>
       <p class="alert alert-success"><%= notice %></p>
     <% end %>
     <% if alert %>
       <p class="alert alert-danger"><%= alert %></p>
     <% end %>
-    <%= yield %>
+    <div class="main-content">
+      <%= yield %>
+    </div>
   </body>
 </html>
