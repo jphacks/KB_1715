@@ -1,0 +1,3 @@
+<% @posts.each do |post| %>
+    <img src="<%= "/#{post.image_name.force_encoding("utf-8")}" %>">
+<% end %>

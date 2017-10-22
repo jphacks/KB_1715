@@ -59,3 +59,5 @@ gem 'devise'
 group :production, :staging do
   gem 'unicorn'
 end
+
+gem 'rest-client'
