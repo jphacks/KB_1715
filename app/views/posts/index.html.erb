@@ -1,11 +1,12 @@
 <p id="notice"><%= notice %></p>
-
+<div align="center">
+<h2><%= link_to '新規投稿', new_post_path %><br></h2>
+</div>
+<br>
+<div align="center">
 <h1>自分の投稿写真</h1>
-
+</div>
     <% @posts.each do |post| %>
       <img src="<%= "/#{post.image_name.force_encoding("utf-8")}" %>">
         <%= link_to '削除', post, method: :delete, data: { confirm: 'Are you sure?' } %>
     <% end %>
-<br>
-
-<%= link_to '新規投稿', new_post_path %>
