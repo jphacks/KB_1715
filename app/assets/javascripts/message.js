@@ -10,9 +10,9 @@ $(function(){
   });
   function update(){ //この関数では以下のことを行う
     if($('.posts')[0]){ //もし'posts'というクラスがあったら
-      var message_id = $('.posts:last').data('id'); //一番最後にある'posts'というクラスの'id'というデータ属性を取得し、'message_id'という変数に代入
+      var post_id = $('.posts:last').data('id'); //一番最後にある'posts'というクラスの'id'というデータ属性を取得し、'post_id'という変数に代入
     } else { //ない場合は
-      var message_id = 0 //0を代入
+      var post_id = 0 //0を代入
     }
     $.ajax({ //ajax通信で以下のことを行う
       url: location.href, //urlは現在のページを指定
